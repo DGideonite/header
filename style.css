@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.header {
+    width: 100%;
+    min-height: 50vh;
+    /*  color: white;*/
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+}
+
+.navbar {
+    background: navy;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+    line-height: 80px;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: -90px;
+    color: white;
+}
+
+nav {
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    background: darkorange;
+    transition: all .5s;
+
+}
+
+nav ul {
+    display: block;
+    /*background: darkorange;*/
+    text-align: center;
+    /*  margin-top: -80px;*/
+
+
+}
+
+nav ul li {
+    text-decoration: none;
+    list-style: none;
+    margin: -15px 0;
+}
+
+a.active,
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+a.active,
+nav ul li a:hover {
+    background: navy;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.checkbox {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ nav {
+    top: -400px;
+}
+
+.fa-search:hover > .search-txt {
+    width: 120px;
+    outline: none;
+}
+
+.fa-search {
+    color: darkorange;
+    cursor: pointer;
+}
+
+.search-txt {
+    outline: none;
+    font-size: 16px;
+    width: 0;
+    border-radius: 10px;
+    padding: 0 6px;
+    transition: 0.4s;
+    border: none;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+@media(min-width:768px) {
+    .checkbox {
+        display: none;
+    }
+
+    .navbar {
+        background: navy;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-items: center;
+        justify-content: space-between;
+        padding: 0 4%;
+        line-height: 80px;
+    }
+
+
+    .navbar .logo {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        margin-left: 0px;
+    }
+
+    nav {
+        box-sizing: border-box;
+        width: 100%;
+        position: none;
+        /*left: 0;
+    top: 80px;*/
+        background: none;
+        transition: none;
+
+    }
+
+    nav ul {
+        display: flex;
+        /*background: darkorange;*/
+        text-align: inherit;
+        /*  margin-top: -80px;*/
+    }
+
+    nav ul li {
+        text-decoration: none;
+        list-style: none;
+        margin: -15px 0;
+    }
+}
